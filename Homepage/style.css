@@ -5,8 +5,8 @@
     border: 0;
     outline: 0;
     font-size: 100%;
-    vertical-align: baseline;
     background: transparent;
+    
 }
 
 
@@ -98,7 +98,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     height: 20%;
     background-color: hsl(0, 62%, 36%);
 }
@@ -106,8 +106,8 @@
 .section_des{
     display:flex;
     justify-content: space-between;
-    align-items: center;
-    height: 20%;
+    align-items:center;
+    height: 10%;
     width: 75%;
 }
 .logo_container{
@@ -126,9 +126,13 @@
     width: 80%;
 }
 #Timeline{
-    height: 100vh;
-    padding: 0;
-    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color: white;
+    width: 100%;
+    height: 1000px;
 }
 /*
 .Timeline_Buttons{
@@ -141,7 +145,8 @@
 .Timeline_Buttons {
     height: 100px;
     width: 250px;
-    background-color: aqua;
+    background-color: white;
+    border: 2px solid aqua;
     cursor: pointer;
     border-radius: 8px;
     margin: 10px; /* Add some margin to separate the buttons */
@@ -155,13 +160,13 @@
     display: none;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    height : 400px;
-    width : 900px;
+    height : 500px;
+    width : 1000px;
+    padding: 15px;
 }
 #Timeline_List{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 95%;
     height:140px;
     background-color: white;
@@ -171,15 +176,7 @@
     justify-content: space-between;
     
 }
-/*
-.tiles{
-    list-style-type: none;
 
-}
-.tiles li{
-    display: inline;
-    float: left;
-}*/
 
 .tiles {
     list-style-type: none;
@@ -188,7 +185,7 @@
     padding: 0; /* Remove the default padding of the ul element */
   }
   
-  .tiles li {
+.tiles li {
     font-size: 30px;
   }
 li{
@@ -202,6 +199,67 @@ h1{
 p{
     font-family: 'Borel', cursive;
     font-size: 20px;
-    color: aqua;
+    color: black;
 }
 
+.mySlides {display: none;}
+.myimages {
+    vertical-align: middle;
+    height: 400px;
+    width: 80%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 50%;
+  max-height: 100vh;
+  position: relative;
+  margin: auto;
+  background-color: #000;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
