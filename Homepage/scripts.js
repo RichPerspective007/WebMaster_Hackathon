@@ -1,3 +1,30 @@
+var loader = document.getElementById("preloader");
+
+// Display the preloader initially
+loader.style.display = "block";
+
+// Set the minimum time in milliseconds (e.g., 2000 milliseconds = 2 seconds)
+var minimumTime = 2000;
+
+// Hide the preloader after the minimum time has passed
+setTimeout(function() {
+  loader.style.display = "none";
+}, minimumTime);
+
+// Listen for the "load" event to hide the preloader when all content has finished loading
+window.addEventListener("load", function() {
+  // Make sure the preloader is displayed for at least the minimum time
+  var currentTime = new Date().getTime();
+  var elapsedTime = currentTime - window.performance.timing.navigationStart;
+  var remainingTime = Math.max(minimumTime - elapsedTime, 0);
+  
+  setTimeout(function() {
+    loader.style.display = "none";
+  }, remainingTime);
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
 let currentlyDisplayedDiv = null;
 const btns = document.getElementsByClassName("Timeline_Buttons");
