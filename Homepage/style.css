@@ -134,11 +134,38 @@
 /* Social Links Sticky Bar styles end here*/
 .Welcome_Band{
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     background-image: url(Images/back2.jpg);
     background-repeat: none;
     background-size: cover;
     height: 100vh;
+}
+.welcome header{
+  font-size: 100px;
+  color: #f2f2f2;
+}
+.welcome img{
+  width: 600px;
+  height:180px;
+}
+
+.welcome button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(230, 107, 12);
+}
+.welcome button:hover {
+  background: rgb(222, 42, 25);
 }
 .section{
     display: flex;
